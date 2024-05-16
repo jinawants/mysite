@@ -2,7 +2,7 @@
 <html lang="en" data-bs-theme="auto">
   <head><script src="{{url_for('static', filename='js/color-modes.js')}}"></script>
 
-    {% include 'header.html' %}
+    {% include 'reference/header.html' %}
 
     <script>
       function check_state(_state){
@@ -15,7 +15,7 @@
     </script>
   </head>
   <body onload="check_state('{{state}}')" class="d-flex align-items-center py-4 bg-body-tertiary">
-    {% include 'theme_button.html'%}
+    {% include 'reference/theme_button.html'%}
     <!-- contents -->
 <main class="form-signin w-100 m-auto">
   <form action="/main" method="post">
