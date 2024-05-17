@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 외부 css 파일 로드 -->
+    <link rel="stylesheet"
+    href="{{url_for('static', filename='css/slide.css')}}">
+    <!-- 외부 js 파일 로드-->
+    <script src="{{url_for('static', filename='js/slide.js')}}"></script>
+</head>
+<body onload="showSlide()">
+    <span class="slideshow-container">
+        <div class="slide_background">
+            <!-- 반복문 사용 -->
+            {% for i in range(cnt) %}
+            <div class="slides fade">
+                <a href="{{links[i]}}">
+                    <img src="{{imgs[i]}}" class="carousel">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </span>
+</body>
+</html>
